@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Flyweight</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+    <section class="stack" data-id="fcf71b6291463a2e000c82e3cf3cf77b">
+        <section class="" data-id="6d5c41b6ebe3f03401d5ab1d0bb6fb68">
+            <h1>
+                <br>
+            </h1>
+<h1>Flyweight<span>&nbsp;</span>
+</h1>
+<div>
+<p>
+            <span>
+                <font style="font-size: 32px;">
+                    <br>
+                </font>
+            </span>
+        </p>
+<p>
+        <br>
+    </p>
+<br>
+    <p>
+</p>
+</div>
+</section>
+<section class="" data-id="d864f2d2f4d432fee38e21290631142f">
+    <p style="font-style: normal; font-variant: normal;" class="fragment roll-in" data-fragment-index="0">
+    <font style="font-size: 42px;">Flyweight definiuje strukturę dla współdzielonego obiektu, który może być użyty i swobodnie współdzielony równocześnie w wielu &nbsp;kontekstach.</font>
+</p>
+<p style="font-style: normal; font-variant: normal;">
+    <font style="font-size: 42px;">
+        <br>
+    </font>
+</p>
+<p style="font-style: normal; font-variant: normal;" class="fragment roll-in" data-fragment-index="1">
+    <font style="font-size: 42px;">Pozwala wielu klientom korzystać z jednego obiektu.&nbsp;</font>
+</p>
+<p style="font-style: normal; font-variant: normal;">
+    <font style="font-size: 42px;">
+        <br>
+    </font>
+</p>
+<p style="font-style: normal; font-variant: normal;">
+</p>
+<p style="font-style: normal; font-variant: normal;" class="fragment roll-in" data-fragment-index="2">
+    <font style="font-size: 42px;">Wspólny dostęp do obiektu przydaje się między innymi wtedy, gdy zachodzi potrzeba zarządzania tysiącami czy wręcz dziesiątkami tysięcy drobnych obiektów, na przykład znaków w internetowej wersji książki.</font>
+</p>
+</section>
+</section>
+<section class="" data-id="38890852a83976736482fa869d0bd0f4">
+    <h2>UML</h2>
+<p class="fragment grow" data-fragment-index="0">
+    <img src="img/Flyweight.png" style="width: 938.7768240343348px; height: 485px; max-height: none; max-width: none;">
+    <br>
+</p>
+
+
+
+</section>
+    <section class="" data-id="afa702c8fec64754f482c4480c6507fd">
+        <h2>Dlaczego stosujemy?</h2>
+<p>
+<br>
+</p>
+<p>
+</p>
+<ul>
+    <li class="fragment fade-in" data-fragment-index="0">Wydajność pamięciowa</li>
+    <li class="fragment fade-in" data-fragment-index="1">Konsekwencja=jednolitość</li>
+    <li class="fragment fade-in" data-fragment-index="2">Swobodne współdzielenie</li>
+</ul>
+<p>
+    </p>
+</section>
+    <section class="stack" data-id="4e330b1a8afa48f294a5ca2eff462eb6">
+        <section class="" data-id="0d164f401bb2d561c80f463c4d24b4bb">
+            <h2>Warunki Gdy ma sens</h2>
+            <h2>i wdrażanie w realnym projekcie:</h2>
+<div>
+            <br>
+        </div>
+    </section>
+    <section class="" data-id="452859fe7738769ca6dad0afcb33040c">
+        <p>
+</p>
+<ul>
+<li class="fragment roll-in" data-fragment-index="0">aplikacja używa bardzo dużej ilości podobnych obiektów</li>
+<li class="fragment roll-in" data-fragment-index="1">koszt pamięciowy tych obiektów jest duży</li>
+<li class="fragment roll-in" data-fragment-index="2">obiekty są tworzone i usuwane co wywiera nacisk na GC</li>
+<li class="fragment roll-in" data-fragment-index="3">duży kawałek tych obiektów może być wyniesiony do zewnętrznego kontekstu</li>
+<li class="fragment roll-in" data-fragment-index="4">kiedy już to się stanie to możemy wprowadzić niewielką liczbę współdzielonych niezmiennych obiektów w miejsce tej dużej ilości</li>
+<li class="fragment roll-in" data-fragment-index="5">aplikacja nie polega na tożsamości obiektów (wprowadzamy tak naprawdę Value Objects)</li>
+<li class="fragment roll-in" data-fragment-index="6">obiekty muszą być totalnie niezależne od kontekstu</li>
+<li class="fragment roll-in" data-fragment-index="7">jakakolwiek zmiana musi być od razu widoczna dla wszystkich klientów</li>
+</ul>
+<p>
+</p>
+</section>
+    </section>
+    <section class="stack" data-id="922563b16aff82280e45f06ca341e519">
+        <section class="" data-id="9fc63ef27138c8b7f817cdd7b6721d05">
+            <h2>Konsekwencje/Wady</h2>
+        </section>
+        <section class="" data-id="8b4d34fdc66af40db2dda8b46df0d6cd">
+            <p>
+</p>
+<ul>
+<li class="fragment roll-in" data-fragment-index="0">zwiększona potrzeba obliczeń (stan zewnętrzny)</li>
+<li class="fragment roll-in" data-fragment-index="1">nie może być wymaganej tożsamości obiektów</li>
+<li class="fragment roll-in" data-fragment-index="2">jeśli są kłopoty z wyznaczeniem części zewnętrznej/kontekstu to może się zdarzyć, że nadal będziemy wymagać sporej ilości obiektów</li>
+<li class="fragment roll-in" data-fragment-index="3">obiekty nie mogą odwoływać się do swoich rodziców/hostów</li>
+<li class="fragment roll-in" data-fragment-index="4">jakikolwiek kontekst musi być przekazywany do Flyweight</li>
+<li class="fragment roll-in" data-fragment-index="5">należy być czujnym w sprawach wielowątkowych, które z reguły mają miejsce</li>
+</ul>
+<p>
+</p>
+</section>
+        </section>
+        <section class="" data-id="d5218e81de81bff1a58df9288d4c37f5">
+            <h2>Typowe zastosowanie:</h2>
+            <p>
+            <br>
+        </p>
+        <p>
+    </p>
+    <ul>
+        <li class="fragment" data-fragment-index="0">String interning</li>
+        <li class="fragment" data-fragment-index="1">Znaki w dokumencie (glyphs)</li>
+        <li class="fragment" data-fragment-index="2">Grafika w grach (np. przeciwnicy)</li>
+    </ul>
+    <p>
+</p>
+</section>
+<section class="" data-id="ab561832f348525232b048a9c787d687">
+    <h2>
+  <p class="fragment grow" data-fragment-index="0">
+    <img src="img/FlyweightConcrete.png">
+    <br>
+  </p>
+</h2>
+</section>
+</div>
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

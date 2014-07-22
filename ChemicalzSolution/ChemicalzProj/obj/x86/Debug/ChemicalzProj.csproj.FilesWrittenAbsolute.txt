@@ -1,0 +1,5 @@
+/home/plenza/projects/prezentacje/Flyweight/ChemicalzSolution/ChemicalzProj/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/plenza/projects/prezentacje/Flyweight/ChemicalzSolution/ChemicalzProj/bin/Debug/ChemicalzProj.exe.mdb
+/home/plenza/projects/prezentacje/Flyweight/ChemicalzSolution/ChemicalzProj/bin/Debug/ChemicalzProj.exe
+/home/plenza/projects/prezentacje/Flyweight/ChemicalzSolution/ChemicalzProj/obj/x86/Debug/ChemicalzProj.exe
+/home/plenza/projects/prezentacje/Flyweight/ChemicalzSolution/ChemicalzProj/obj/x86/Debug/ChemicalzProj.exe.mdb

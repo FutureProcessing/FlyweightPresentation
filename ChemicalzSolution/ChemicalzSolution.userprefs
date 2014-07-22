@@ -1,0 +1,33 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChemicalzTests/Test.cs">
+    <Files>
+      <File FileName="ChemicalzProj/Program.cs" Line="10" Column="4" />
+      <File FileName="ChemicalzProj/NaiveSubstance.cs" Line="20" Column="3" />
+      <File FileName="ChemicalzProj/Mixture.cs" Line="21" Column="2" />
+      <File FileName="ChemicalzProj/SymbolEnum.cs" Line="29" Column="1" />
+      <File FileName="ChemicalzProj/NaiveMixtures.cs" Line="6" Column="6" />
+      <File FileName="ChemicalzProj/Substance.cs" Line="14" Column="17" />
+      <File FileName="ChemicalzProj/ChemicalFactory.cs" Line="34" Column="29" />
+      <File FileName="ChemicalzProj/IChemical.cs" Line="21" Column="9" />
+      <File FileName="ChemicalzProj/ISubstance.cs" Line="9" Column="17" />
+      <File FileName="ChemicalzProj/Mixtures.cs" Line="19" Column="61" />
+      <File FileName="ChemicalzTests/Test.cs" Line="14" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="ChemicalzTests" expanded="True">
+            <Node name="ChemicalzTests" expanded="True">
+              <Node name="Test" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
